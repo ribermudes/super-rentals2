@@ -11,6 +11,7 @@ export default Ember.Component.extend({
         owner: this.get('owner'),
         city: this.get('city'),
         type: this.get('type'),
+        rating: this.get('rating'),
         image: this.get('image'),
         bedrooms: this.get('bedrooms'),
       };

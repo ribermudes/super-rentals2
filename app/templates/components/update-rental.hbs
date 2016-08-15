@@ -23,6 +23,11 @@
         </div>
 
         <div class="form-group">
+          <label for="rating">Number of Stars</label>
+          {{input type='number' min=1 max=5 value=rating id="rating" placeholder=rental.rating}}
+        </div>
+
+        <div class="form-group">
           <label for="image">Image URL</label>
           {{input value=image id="image" placeholder=rental.image}}
         </div>
