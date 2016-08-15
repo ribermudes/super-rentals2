@@ -1,7 +1,8 @@
 import Ember from 'ember';
+import { EKMixin } from 'ember-keyboard';
 
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(EKMixin,{
   model() {
     return this.store.findAll('rental');
   },
