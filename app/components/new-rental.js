@@ -9,6 +9,7 @@ export default Ember.Component.extend({
     save1() {
       var params = {
         owner: this.get('owner'),
+        city: this.get('city'),
         type: this.get('type'),
         bedrooms: this.get('bedrooms'),
         image: this.get('image'),
