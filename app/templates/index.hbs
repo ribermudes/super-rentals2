@@ -2,7 +2,7 @@
 
 <ul>
   {{#each model.rentals as |rental|}}
-    {{rental-tile rental=rental}}
+    {{rental-tile rental=rental}} {{rental-cost rental}}
   {{/each}}
 </ul>
 
@@ -11,7 +11,7 @@
 
 <ul>
   {{#each model.cities as |city|}}
-    <li>{{#link-to 'city' city.id}}{{city.name}}{{/link-to}}</li>
+    <li>{{city-popularity city}}{{#link-to 'city' city.id}}{{city.name}}{{/link-to}}</li>
   {{/each}}
 </ul>
 
