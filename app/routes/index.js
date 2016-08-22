@@ -1,8 +1,6 @@
 import Ember from 'ember';
-import { EKMixin } from 'ember-keyboard';
 
-
-export default Ember.Route.extend(EKMixin,{
+export default Ember.Route.extend( {
   model() {
     return Ember.RSVP.hash({
       cities: this.store.findAll('city'),
@@ -11,6 +9,11 @@ export default Ember.Route.extend(EKMixin,{
   },
 
   actions: {
+    save3(params) {
+      var newRental = this.store.createRecord('rental', params);
+      newRental.save();
+      this.transitionTo('index');
+    },
     saveCity3(params) {
       var newCity = this.store.createRecord('city', params);
       newCity.save();
